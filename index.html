@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rock, Paper, Scissors</title>
+    <link rel="shortcut icon" href="./image/6688580.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="frame1">
+        <div class="headersection">
+            <div class="logobox">
+                <p>ROCK</p>
+                <p>PAPER</p>
+                <p>SCISSORS</p>
+            </div>
+            <div class="scorebox">
+                <div class="col leftdiv">
+                    <p>COMPUTER</p>
+                    <p>SCORE</p>
+                    <h1 id="com_score">0</h1>
+                </div>
+                <div class="col rightdiv">
+                    <p>YOUR</p>
+                    <p>SCORE</p>
+                    <h1 id="your_score">0</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="maincontainer">
+            <div class="gamesection">
+                <div class="button rock ">
+                    <div class="button_inside">
+                        <img src="./image/icons8-fist-67 1.png" class="userchoice" alt="" id="rock">
+                    </div>
+                </div>
+                <div class="button scissors">
+                    <div class="button_inside">
+                        <img src="./image/17911 1.png" alt="" style="width: 50px;" class="userchoice" id="scissors">
+                    </div>
+                </div>
+                <div class="button paper m_to_c">
+                    <div class="button_inside">
+                        <img src="./image/icons8-hand-64 1.png" alt="" class="userchoice" id="paper">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="backsidecontainer">
+            <div class="picked_box">
+                <p>YOU PICKED</p>
+                <div class="button" id="picring">
+                    <div class="button_ring" id="playerpick">
+                    </div>
+                </div>
+            </div>
+            <div class="result_box">
+                <p id="result"></p>
+                <p class="againsttext">AGAINST PC</p>
+                <button class="playagain" onclick="window.location.href = './index.html';">PLAY AGAIN</button>
+            </div>
+            <div class="picked_box">
+                <p>PC PICKED</p>
+                <div class="button" id="pcring">
+                    <div class="button_ring" id="pcpick">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="rulebox">
+            <div class="close">x</div>
+            <h2>Game Rules</h2>
+            <ul>
+                <li>Rock beats scissors, scissors beat <br> paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll <br>count off “rock, paper, scissors,<br> shoot” or just “rock,
+                    paper,
+                    scissors.”</li>
+                <li>Use rock, paper, scissors to settle <br> minor decisions or simply play to <br> pass the time</li>
+                <li>If both players lay down the same <br> hand, each player lays down another <br>hand</li>
+            </ul>
+        </div>
+
+        <div class="footersection">
+            <div class="bottom">
+                <button class="rule_button">RULES</button>
+                <button class="next_button" id="next_btn"
+                    onclick="window.location.href ='./win/win.html';">Next</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

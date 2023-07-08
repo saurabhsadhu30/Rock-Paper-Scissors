@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Inconsolata&family=Inter&family=Roboto&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Dangrek&family=Inconsolata&family=Inter&family=Roboto&family=Space+Mono&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #8cc461;
+}
+
+.headersection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 800px;
+  min-width: 800px;
+  height: 150px;
+  margin: auto;
+  margin-top: 70px;
+  padding: 5px;
+  padding-left: 20px;
+  border: 2px solid white;
+  border-radius: 13px;
+}
+.logobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.scorebox {
+  display: flex;
+  width: 300px;
+  padding: 0px;
+  color: black;
+}
+.col {
+  flex: 1;
+}
+.leftdiv {
+  box-sizing: border-box;
+  background-color: white;
+  color: #656565;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  margin: 10px;
+  border-radius: 9px;
+}
+.leftdiv p {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+.leftdiv h1 {
+  font-size: 68px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #252525;
+}
+
+.rightdiv {
+  box-sizing: border-box;
+  background-color: white;
+  color: #656565;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  margin: 10px;
+  border-radius: 9px;
+}
+.rightdiv p {
+  font-size: 14px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+.rightdiv h1 {
+  font-size: 68px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #252525;
+}
+.rulebox {
+  /* display: none; */
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #004429;
+  color: #ffffff;
+  position: fixed;
+  width: 278px;
+  height: 306px;
+  right: 30px;
+  top: 320px;
+  border-radius: 13px;
+  border: 7px solid #ffffff;
+}
+
+.rulebox_open {
+  z-index: 9999;
+  opacity: 1;
+  overflow: visible;
+}
+.rulebox h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 34px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+ul {
+  height: 230px;
+  margin: auto;
+  line-height: 15px;
+}
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "\25AA";
+  color: #ffd600;
+  font-weight: bold;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: -1em;
+}
+
+li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  margin: 10px 0px 10px 30px;
+}
+
+.close {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  right: -30px;
+  transition: all 200ms;
+  color: white;
+  font-family: "Dangrek";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 52px;
+  background-image: url("./image/Ellipse\ 6.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.footersection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  min-width: 100vw;
+  height: 80px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.rule_button {
+  box-sizing: border-box;
+  width: 119px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px;
+  margin-right: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+}
+.next_button {
+  display: none;
+  box-sizing: border-box;
+  width: 119px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  margin: 5px;
+  margin-right: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.maincontainer {
+  width: 700px;
+  min-width: 700px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.gamesection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 450px;
+  max-width: 400px;
+  margin: 0 132px;
+  padding: 65px 0;
+  background-image: url("./image/triangle2.png");
+  background-repeat: no-repeat;
+  background-size: 275px;
+  background-position: center;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.199);
+}
+
+.button_inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.button_ring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.button_inside img {
+  width: 80px;
+}
+.sciss {
+  width: 50px;
+}
+.m_to_c {
+  margin: 0 auto;
+}
+.rock {
+  background-image: linear-gradient(to bottom, #0074b6 0%, #0074b6 100%);
+}
+.scissors {
+  background-image: linear-gradient(to bottom, #bd00ff 0%, #bd00ff 100%);
+}
+.paper {
+  background-image: linear-gradient(to bottom, #ffa943 0%, #ffa943 100%);
+}
+
+/*  ------------------------------ backside conatiner ------------------------------ */
+
+.backsidecontainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  min-width: 700px;
+  height: 350px;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.backsidecontainer_open {
+  display: flex;
+}
+.picked_box p {
+  margin-bottom: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.result_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 83px;
+  margin-top: 122px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+}
+.result_box > p:nth-child(2) {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.result_box > p:nth-child(1) {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 39px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.picked_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.playagain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 48px;
+  margin-top: 10px;
+  margin-right: 5px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: #6b6b6b;
+  cursor: pointer;
+}
+
+.ripplebox {
+  box-shadow: 0 0 0 52px #418f05, 0 0 0 82px #57a719, 0 0 0 112px #7ab949;
+  z-index: -200;
+}
+
+.frame1 {
+  /* background-color: red; */
+  width: 100vw;
+  height: 100vh;
+}
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  .headersection {
+    margin-top: 30px;
+    width: 700px;
+    min-width: 700px;
+  }
+  .maincontainer {
+    margin-top: 10px;
+  }
+  .gamesection {
+    padding: 12px 0;
+  }
+  .footersection {
+    margin-top: -35px;
+  }
+  .backsidecontainer {
+    margin-top: 0px;
+    height: 338px;
+  }
+  .rulebox {
+    top: 215px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .headersection {
+    justify-content: space-between;
+    flex-direction: column;
+    width: 0px;
+    min-width: 0px;
+    height: 0px;
+    margin: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    padding-left: 0px;
+  }
+  .gamesection {
+    width: 380px;
+    max-width: 380px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .rulebox {
+    position: absolute;
+    top: 380px;
+  }
+}
+/*@media only screen and (max-width: 480px) {
+   body {
+    overflow: scroll;
+    width: auto;
+    min-width: auto;
+  }
+ 
+  .headersection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 800px;
+  min-width: 800px;
+  height: 150px;
+  margin: auto;
+  margin-top: 70px;
+  padding: 5px;
+  padding-left: 20px;
+  border: 2px solid white;
+  border-radius: 13px;
+}
+  .logobox {
+    display: flex;
+    width: 167px;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  .scorebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 208px;
+    padding: 0px;
+  }
+  .col {
+    flex: 1;
+  }
+  .leftdiv {
+    width: 200px;
+  }
+  .leftdiv p {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .leftdiv h1 {
+    font-size: 68px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #252525;
+  }
+
+  .rightdiv {
+    width: 200px;
+  }
+  .rightdiv p {
+    font-size: 14px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .rightdiv h1 {
+    font-size: 68px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #252525;
+  }
+
+  .rulebox {
+    left: 70px;
+    top: 778px;
+  }
+
+  .maincontainer {
+    width: 400px;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+  .gamesection {
+    margin: 0px 11px;
+    width: 375px;
+    min-width: 375px;
+  }
+
+  .footersection {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0px;
+    width: 410px;
+    min-width: 410px;
+  }
+  .next_button {
+    margin-right: 0px;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: flex;
+    align-items: center;
+    width: 410px;
+    min-width: 410px;
+    justify-content: center;
+  }
+  .rule_button {
+    margin: 0px;
+  }
+
+  .backsidecontainer {
+    width: 375px;
+    min-width: 375px;
+    flex-direction: column;
+    margin-top: 255px;
+  }
+  .result_box {
+    margin-top: 133px;
+  }
+  .picked_box {
+    margin-top: 80px;
+  }
+  .next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+  }
+} */
